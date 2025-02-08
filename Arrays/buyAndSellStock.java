@@ -3,14 +3,12 @@ public class buyAndSellStock{
     public static int profit(int prices[]){
         int maxProfit = 0;
         int buyPrice = Integer.MAX_VALUE;
-        for(int i=0 ; i<prices[i] ; i++){
-            int sellPrice = prices[i];
-            int profit = 0 ;
-            if(buyPrice < sellPrice){
-                profit = sellPrice - buyPrice;
+        for(int i=0 ; i<prices.length ; i++){
+            if(buyPrice < prices[i]){
+                int profit = prices[i] - buyPrice;
                 maxProfit = Math.max(profit , maxProfit);
             } else{
-                buyPrice = sellPrice;
+                buyPrice = prices[i];
             }
         }
         return maxProfit;
