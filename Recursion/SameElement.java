@@ -1,12 +1,11 @@
 public class SameElement{
     public static void printSameElement(int arr[], int key,int i){
-        if(i == arr.length-1){
+        if(i == arr.length){
             return ;
         }
         if(arr[i] == key){
             System.out.print(i+" ");
         }
-        i++;
         printSameElement(arr,key, i+1);
     }
     public static void main(String args[]){
